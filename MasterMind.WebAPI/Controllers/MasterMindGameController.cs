@@ -7,11 +7,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MasterMind.WebAPI.Controllers
 {
 
     [RoutePrefix("api/MasterMindGame")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class MasterMindGameController : ApiController
     {
         public static MasterMindGameHandler MasterMindGameHandler { get; set; }
